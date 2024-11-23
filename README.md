@@ -1,52 +1,82 @@
-
+# Object Recognition with Voice 🎯 🗣️
 
 The most recent and cutting-edge `YOLO` model, `YoloV8`, can be utilized for applications including object identification, image categorization, and instance segmentation. `Ultralytics`, who also produced the influential `YOLOv5` model that defined the industry, developed `YOLOv8`. Compared to `YOLOv5`, `YOLOv8` has a number of architectural updates and enhancements.
 
-![YoloV8 Basic Output](inference/banner.png)
-
-## Flow
+## Flow 🔄
 
 Here simply use `YOLO` models in a python environment with opencv on `Windows`, `Mac` or `Linux` system. It can be imported from the ultralytics module
 
 Two example codes were defined for the module
 `yolov8_basics.py` and `yolov8_n_opencv.py`
 
+## Installation Steps 🚀
 
+### Prerequisites ✅
+- Python 3.7 or higher
+- pip (Python package installer)
+- A webcam (for real-time detection) or video files for testing
 
-> **Note**
->
-> Install requirements.txt file in a Python>=3.7.0 environment, including PyTorch>=1.7
-
-## Installation
-
+### Step 1: Clone the Repository 📥
+```bash
+git clone https://github.com/TJSreeharish/Object_recoginition_with_voice_SreeharishTJ.git
+cd Object_recoginition_with_voice_SreeharishTJ
+```
+### Step 2: Create and Activate Virtual Environment (Recommended) 🔧
+#### For Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+#### For Linux/Mac:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+### Step 3: Install Dependencies 📦
 ```bash
 pip install -r requirements.txt
 ```
+### Step 4: Download YOLO Weights 🏋️
+The project uses YOLOv8n weights which should be placed in the `weights` folder. The weights will be automatically downloaded when running the scripts for the first time.
+### Step 5: Verify Installation ✨
+Run the system check to verify the installation:
+```bash
+python yolo_check_system.py
+```
+## Running the Project 🎮
 
-> **Note**
->
-> Link to official  [`YoloV8 GitHub page`](https://github.com/ultralytics/ultralytics). 
+1. For basic YOLO detection:
+```bash
+python yolov8_basics.py
+```
+2. For real-time detection with OpenCV:
+```bash
+python yolov8_n_opencv.py
+```
+## Troubleshooting 🔍
 
+If you encounter any issues:
+1. Ensure Python version is 3.7 or higher: `python --version`
+2. Verify PyTorch installation: `python -c "import torch; print(torch.__version__)"`
+3. Check if your webcam is properly connected (for real-time detection)
+4. Make sure all dependencies are installed correctly: `pip list`
 
-## Using `yolov8_basics.py`
+## Using `yolov8_basics.py` 📸
 
 ```python
 python yolov8_basics.py
 ```
-
 ![YoloV8 Basic Output](inference/out.JPG)
 
 
-
-## Using `yolov8_n_opencv.py`
+## Using `yolov8_n_opencv.py` 🎥
 
 `Use YoloV8 is an OpenCV way`. Have control over detection on each frame and choose what happens per detection.
 
 ```python
 python yolov8_n_opencv.py
 ```
-
-## Code | `yolov8_n_opencv.py` |
+## Code | `yolov8_n_opencv.py` | 💻
 
 
 ```python
@@ -152,4 +182,3 @@ cap.release()
 cv2.destroyAllWindows()
 
 ```
-
