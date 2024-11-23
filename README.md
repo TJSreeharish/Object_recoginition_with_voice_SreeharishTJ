@@ -66,7 +66,7 @@ If you encounter any issues:
 ```python
 python yolov8_basics.py
 ```
-![YoloV8 Basic Output](inference/out.JPG)
+
 
 
 ## Using `yolov8_n_opencv.py` 🎥
